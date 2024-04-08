@@ -13,7 +13,7 @@ df= pd.read_csv(url)
 st.title('Gráfica de barras')
 
 columns = df.columns.tolist()
-selected_columns = st.multiselect("Selecciona la columna a graficar", columns, default="League")
+selected_columns = st.multiselect("Selecciona la columna a graficar, debe ser tipo string", columns, default="League")
 s = df[selected_columns[0]].str.strip().value_counts()
 
 trace = go.Bar(x=s.index,y=s.values)
@@ -27,7 +27,7 @@ st.plotly_chart(fig)
 #Gráfica de dispersión
 st.title('Gráfica de Dispersión')
 valx = st.multiselect("Selecciona País, Liga o Club", columns, default="Country")
-valy = st.multiselect("Selecciona la métrica", columns, default="Ratings")
+valy = st.multiselect("Selecciona la métrica, que debe ser tipo número", columns, default="Ratings")
 
 valoresx = df[valx[0]]
 valoresy = df[valy[0]]
