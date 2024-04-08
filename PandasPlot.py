@@ -5,6 +5,7 @@ import plotly.graph_objs as go
 
 #requirements.txt
 
+
 #Gráfica de barras
 st.title('Gráfica de un dataframe: Selección de datos por los usuarios')
 url = 'https://raw.githubusercontent.com/LilianaC/Pandas/master/Fifa%2023%20Fut%20Players.csv'
